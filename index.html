@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="./styles/globalStyles.css" />
+		<link rel="stylesheet" href="./styles/button.css" />
+		<link rel="stylesheet" href="./styles/input.css" />
+		<link rel="stylesheet" href="./styles/form.css" />
+		<title>GitSearch</title>
+	</head>
+	<body>
+		<div class="form-wrapper">
+			<div class="form">
+				<div class="form-header">
+					<div class="container">
+						<h2>GitSearch</h2>
+
+						<p>
+							Encontre e se conecte com profissionais de forma rápida e fácil
+						</p>
+
+						<div>Achados recentemente</div>
+					</div>
+				</div>
+				<div class="form-body">
+					<form action="./pages/profile/">
+						<h4>Procurar por um usuário</h4>
+						<label for="user">Usuário GitHub</label>
+						<input id="user" type="text" name="user" placeholder="Usuário" />
+
+						<button type="submit">Pesquisar</button>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="./script/index.js"></script>
+	</body>
+</html>
