@@ -28,7 +28,14 @@
 					<form action="./pages/profile/">
 						<h4>Procurar por um usuário</h4>
 						<label for="user">Usuário GitHub</label>
-						<input id="user" type="text" name="user" placeholder="Usuário" />
+						<input
+							id="user"
+							type="text"
+							name="user"
+							placeholder="Usuário"
+							required
+							onkeyup="mudou()"
+						/>
 
 						<button type="submit">Pesquisar</button>
 					</form>

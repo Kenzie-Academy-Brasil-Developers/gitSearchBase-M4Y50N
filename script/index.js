@@ -20,3 +20,14 @@ function search(nome) {
 function getName() {
 	return document.querySelector("#user");
 }
+
+let nome = "";
+
+function mudou() {
+	nome = document.querySelector("#user").value;
+	localStorage.setItem("nome", nome);
+}
+
+if (localStorage.getItem("nome") != null) {
+	search(localStorage.getItem("nome"));
+}
