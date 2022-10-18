@@ -38,6 +38,57 @@
 	row-gap: 2rem;
 }
 
+.recentes-container {
+	display: flex;
+	align-items: center;
+	column-gap: 1.5rem;
+}
+
+.recentes {
+	display: flex;
+	column-gap: 0.7rem;
+}
+
+.rec {
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.rec img {
+	width: 37px;
+	border-radius: 50%;
+	border: 1px solid transparent;
+}
+
+.img-hover {
+	border: 1px solid var(--color-grey-6) !important;
+}
+
+.rec button {
+	padding: 0.1rem 0.5rem;
+	border: none;
+	border-radius: 3px;
+	box-shadow: 0px 0px 15px var(--color-grey-3);
+}
+
+.button-hover {
+	transform: translateY(-5px);
+	animation: BtnHover 0.3s ease;
+}
+
+@keyframes BtnHover {
+	0% {
+		opacity: 0;
+		transform: translateY(0);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(-5px);
+	}
+}
+
 .form-body {
 	display: flex;
 	flex-direction: column;

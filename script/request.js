@@ -14,8 +14,8 @@ function getUser(item) {
 		});
 }
 
-function getRepos(url) {
-	const repos = fetch(url, myHeaders).then((response) => response.json());
+async function getRepos(url) {
+	const repos = await fetch(url, myHeaders).then((response) => response.json());
 
 	return repos;
 }

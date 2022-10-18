@@ -26,3 +26,39 @@ main {
 	flex-direction: column;
 	row-gap: 1rem;
 }
+
+.nome-bio p {
+	width: 40ch;
+}
+
+.content-btn-prof {
+	margin-left: auto;
+
+	display: flex;
+
+	column-gap: 1rem;
+}
+
+.content-btn-prof a {
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+
+	color: var(--color-grey-6);
+	text-decoration: none;
+
+	padding: 0.75rem 1rem;
+	border-radius: 0.3rem;
+	background-color: var(--color-grey-3);
+
+	transition: all 0.3s ease;
+}
+
+.content-btn-prof a:hover {
+	border-color: var(--color-pink);
+	background-color: var(--color-pink);
+}
+
+.content-btn-prof a:visited {
+	color: var(--color-grey-6);
+}
