@@ -170,6 +170,10 @@ function recentHover() {
 			e.querySelector("button").classList.toggle("hidden");
 			e.querySelector("button").classList.toggle("button-hover");
 		});
+		e.querySelector("button").addEventListener("click", (event) => {
+			localStorage.setItem("item", event.target.value);
+			window.location.href = "./pages/profile/index.html";
+		});
 	});
 }
 
