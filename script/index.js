@@ -1,33 +1,19 @@
-function search(nome) {
-	fetch(`https://api.github.com/users/${nome}`)
-		.then((response) => response.json())
-		.then((response) => {
-			const userSearch = document.querySelector("#userSearch"),
-				nome = document.createElement("h3"),
-				bio = document.createElement("p"),
-				repos_url = document.createElement("a");
+//Search Button
+document.querySelector("form button").addEventListener("click", () => {
+	const inputData = getInput();
+	localStorage.setItem("item", inputData);
+	event.preventDefault();
+	event.target.classList.add("disable");
+	document.querySelector("form button span").classList.toggle("hidden");
+	document.querySelector("form button span").classList.add("loading");
 
-			nome.textContent = response.login;
-			bio.textContent = response.bio;
-			repos_url.textContent = "Repositórios";
-			repos_url.href = response.repos_url;
+	setInterval(() => {
+		window.location.href = "./pages/profile/index.html";
+	}, 1000);
+});
 
-			userSearch.append(nome, bio, repos_url);
-
-			return response;
-		});
-}
-function getName() {
-	return document.querySelector("#user");
-}
-
-let nome = "";
-
-function mudou() {
-	nome = document.querySelector("#user").value;
-	localStorage.setItem("nome", nome);
-}
-
-if (localStorage.getItem("nome") != null) {
-	search(localStorage.getItem("nome"));
+//Get input data
+function getInput() {
+	const inputData = document.querySelector("#user");
+	return inputData.value;
 }

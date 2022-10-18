@@ -20,6 +20,20 @@ body {
 	--color-pink: #c2255c;
 }
 
+ul {
+	list-style-type: none;
+}
+
 .container {
 	padding: 0px 10rem;
+}
+
+.hidden {
+	display: none;
+}
+
+.disable {
+	pointer-events: none;
+	background-color: var(--color-grey-3);
+	box-shadow: 0px 0px 3px var(--color-grey-6);
 }

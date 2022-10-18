@@ -1,0 +1,28 @@
+body {
+	color: var(--color-white);
+	background-color: var(--color-grey-1);
+}
+
+main {
+	padding: 0px 15rem;
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	column-gap: 2rem;
+
+	padding: 3rem 0px;
+}
+
+.head img {
+	width: 100px;
+	border: 3px solid var(--color-pink);
+	border-radius: 50%;
+}
+
+.nome-bio {
+	display: flex;
+	flex-direction: column;
+	row-gap: 1rem;
+}
