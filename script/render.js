@@ -71,7 +71,7 @@ function render(response) {
 	btn1.textContent = "Email";
 	btn1.href = `mailto:${response.email ? response.email : "Email inexistente"}`;
 	btn2.textContent = "Troca de usuário";
-	btn2.href = `${window.location.origin}`;
+	btn2.href = `../../index.html`;
 
 	contentBtn.classList.add("content-btn-prof");
 	contentBtn.append(btn1, btn2);
@@ -126,14 +126,6 @@ function renderRepos(repos) {
 function renderRecents() {
 	const recentes = JSON.parse(localStorage.getItem("recentes")),
 		tagRecentes = document.querySelector(".recentes");
-
-	const html = `<div class="rec">
-		<img
-			src="https://avatars.githubusercontent.com/u/108320342?v=4"
-			alt="recente"
-		/>
-		<button class="hidden">Ir para perfil</button>
-	</div>`;
 
 	recentes.forEach((e) => {
 		const rec = document.createElement("div"),
