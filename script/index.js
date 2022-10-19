@@ -34,6 +34,21 @@ document.querySelector("form button").addEventListener("click", () => {
 	document.querySelector(".erro").classList.toggle("hidden");
 });
 
+//Verify input emptyness
+function isInputDisable() {
+	const input = document.querySelector("#user");
+
+	input.addEventListener("input", () => {
+		const btn = document.querySelector("form button");
+		btn.classList.remove("disable");
+		if (input.value == "") {
+			btn.classList.add("disable");
+		}
+	});
+}
+
+isInputDisable();
+
 //Get input data
 function getInput() {
 	const inputData = document.querySelector("#user");
