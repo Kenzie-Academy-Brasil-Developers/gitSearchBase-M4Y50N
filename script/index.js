@@ -46,7 +46,7 @@ function isInputDisable() {
 		}
 	});
 }
-
+//verify input
 isInputDisable();
 
 //Get input data
